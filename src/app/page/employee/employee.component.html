@@ -1,9 +1,13 @@
-<div class="grid">
-  <div class="col-3 h-screen bg-primary">
-
+<div class="grid bg-primary">
+  <div class="col-2 h-screen ShowOnDesktop">
     <app-sidebar></app-sidebar>
   </div>
-  <div class="col-9 h-screen">
-    <router-outlet></router-outlet>
+  <div class="col h-screen">
+    <p-scrollPanel styleClass="bg-white" [style]="{ width: '100%', height: '100%' }">
+      <div style="height: 100px;" >
+        <app-navigasi></app-navigasi>
+      </div>
+      <router-outlet></router-outlet>
+    </p-scrollPanel>
   </div>
 </div>

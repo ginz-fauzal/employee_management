@@ -1,66 +1,69 @@
-<p-table #dt1 [value]="employees" [globalFilterFields]="['username', 'firstName', 'lastName', 'email']" dataKey="email"
-  [tableStyle]="{ 'min-width': '50rem' }" [rowHover]="true" [rows]="10" [rowsPerPageOptions]="[5, 10, 25]"
-  [paginator]="true">
-  <ng-template pTemplate="caption">
-    <p-iconField iconPosition="left">
-      <p-inputIcon>
-        <i class="pi pi-search"></i>
-      </p-inputIcon>
-      <input pInputText type="text" #textInput (input)="dt1.filterGlobal(textInput.value, 'contains')"
-        placeholder="Global Search" />
-    </p-iconField>
-  </ng-template>
-  <ng-template pTemplate="header">
-    <tr>
-      <th pSortableColumn="username" style="width:25%">
-        Username
-        <p-sortIcon field="username" />
-      </th>
-      <th pSortableColumn="firstName" style="width:25%">
-        First Name
-        <p-sortIcon field="firstName" />
-      </th>
-      <th pSortableColumn="lastName" style="width:25%">
-        Last Name
-        <p-sortIcon field="lastName" />
-      </th>
-      <th pSortableColumn="email" style="width:25%">
-        Email
-        <p-sortIcon field="email" />
-      </th>
-      <th>Aksi</th>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-employees>
-    <tr [pSelectableRow]="employees">
-      <td>
-        <span class="p-column-title">username</span>
-        {{ employees.username }}
-      </td>
-      <td>
-        <span class="p-column-title">First Name</span>
-        <span class="ml-1 vertical-align-middle">{{ employees.firstName }}</span>
-      </td>
-      <td>
-        <span class="p-column-title">Last Name</span>
-        <span class="ml-1 vertical-align-middle">{{ employees.lastName }}</span>
-      </td>
-      <td>
-        <span class="p-column-title">Email</span>
-        {{ employees.email }}
-      </td>
-      <td>
-        <!-- <p-button pRipple icon="pi pi-pencil" class="mr-2" [rounded]="true" [outlined]="true" severity="success"
-          (click)="editProduct(employees)" /> -->
-        <p-button icon="pi pi-trash" severity="danger" [rounded]="true" [outlined]="true"
-          (click)="deleteEmployee(employees)" />
-      </td>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="emptymessage">
-    <tr>
-      <td colspan="4">No customers found.</td>
-    </tr>
-  </ng-template>
-</p-table>
-<p-confirmDialog></p-confirmDialog>
+<div class="px-4 bg-white">
+  <p-toast></p-toast>
+  <p-table #dt1 [value]="employees" [globalFilterFields]="['username', 'firstName', 'lastName', 'email']"
+    dataKey="email" [tableStyle]="{ 'min-width': '50rem' }" [rowHover]="true" [rows]="10"
+    [rowsPerPageOptions]="[5, 10, 25]" [paginator]="true">
+    <ng-template pTemplate="caption">
+      <p-iconField iconPosition="left">
+        <p-inputIcon>
+          <i class="pi pi-search"></i>
+        </p-inputIcon>
+        <input pInputText type="text" #textInput (input)="dt1.filterGlobal(textInput.value, 'contains')"
+          placeholder="Global Search" />
+      </p-iconField>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="username" style="width:25%">
+          Username
+          <p-sortIcon field="username" />
+        </th>
+        <th pSortableColumn="firstName" style="width:25%">
+          First Name
+          <p-sortIcon field="firstName" />
+        </th>
+        <th pSortableColumn="lastName" style="width:25%">
+          Last Name
+          <p-sortIcon field="lastName" />
+        </th>
+        <th pSortableColumn="email" style="width:25%">
+          Email
+          <p-sortIcon field="email" />
+        </th>
+        <th>Aksi</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-employees>
+      <tr [pSelectableRow]="employees">
+        <td>
+          <span class="p-column-title">username</span>
+          {{ employees.username }}
+        </td>
+        <td>
+          <span class="p-column-title">First Name</span>
+          <span class="ml-1 vertical-align-middle">{{ employees.firstName }}</span>
+        </td>
+        <td>
+          <span class="p-column-title">Last Name</span>
+          <span class="ml-1 vertical-align-middle">{{ employees.lastName }}</span>
+        </td>
+        <td>
+          <span class="p-column-title">Email</span>
+          {{ employees.email }}
+        </td>
+        <td>
+          <p-button pRipple icon="pi pi-pencil" class="mr-2" [rounded]="true" [outlined]="true" severity="success"
+            (click)="editProduct()" />
+          <p-button icon="pi pi-trash" severity="danger" [rounded]="true" [outlined]="true"
+            (click)="deleteEmployee(employees)" />
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="4">No customers found.</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <p-confirmDialog></p-confirmDialog>
+</div>

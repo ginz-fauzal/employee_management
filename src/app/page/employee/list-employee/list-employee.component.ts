@@ -37,8 +37,12 @@ export class ListEmployeeComponent implements OnInit{
         icon: 'pi pi-exclamation-triangle',
         accept: () => {
             this.employees = this.employees.filter((val) => val.username !== employee.username);
-            this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Product Deleted', life: 3000 });
+            this.messageService.add({ severity: 'error', summary: 'Successful', detail: 'Product Deleted', life: 3000 });
         }
     });
-}
+  }
+
+  editProduct(){
+    this.messageService.add({ severity: 'warn', summary: 'Successful', detail: 'Product Updated', life: 3000 });
+  }
 }

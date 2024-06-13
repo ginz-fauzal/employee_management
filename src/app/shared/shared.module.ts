@@ -17,11 +17,20 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { DialogModule } from 'primeng/dialog';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { CardModule } from 'primeng/card';
+import { PanelModule } from 'primeng/panel';
+import { MegaMenuModule } from 'primeng/megamenu';
+import { MessagesModule } from 'primeng/messages';
+import { ToastModule } from 'primeng/toast';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   imports: [
     RouterModule,
     CommonModule,
+    FormsModule,
     ButtonModule,
     InputTextModule,
     TableModule,
@@ -35,11 +44,19 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     IconFieldModule,
     InputIconModule,
     DialogModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    ScrollPanelModule,
+    CardModule,
+    PanelModule,
+    MegaMenuModule,
+    AvatarModule,
+    MessagesModule,
+    ToastModule
   ],
   exports: [
     CommonModule,
     ButtonModule,
+    FormsModule,
     RouterModule,
     InputTextModule,
     TableModule,
@@ -53,7 +70,14 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     IconFieldModule,
     InputIconModule,
     DialogModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    ScrollPanelModule,
+    CardModule,
+    PanelModule,
+    MegaMenuModule,
+    AvatarModule,
+    MessagesModule,
+    ToastModule
   ]
 })
 export class SharedModule { }

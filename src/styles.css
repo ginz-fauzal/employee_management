@@ -1,2 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
+
+@media (min-width: 960px) {
+
+    /*visibilities according to the platform*/
+    .ShowOnMobile {
+      display: none;
+      opacity: 0;
+    }
+  
+    .ShowOnDesktop {
+      display: inherit;
+      opacity: 1;
+    }
+  }
+  
+  /* Portrait tablet to landscape and desktop */
+  @media (max-width: 959px) {
+    .ShowOnMobile {
+      display: inherit;
+      opacity: 1;
+    }
+  
+    .ShowOnDesktop {
+      display: none;
+      opacity: 0;
+    }
+  }
