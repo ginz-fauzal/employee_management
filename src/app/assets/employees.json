@@ -1,7 +1,6 @@
 [
     {
         "username": "jdoe",
-        "password": "password123",
         "firstName": "John",
         "lastName": "Doe",
         "email": "jdoe@example.com",
@@ -13,7 +12,6 @@
     },
     {
         "username": "asmith",
-        "password": "password456",
         "firstName": "Alice",
         "lastName": "Smith",
         "email": "asmith@example.com",
@@ -25,7 +23,6 @@
     },
     {
         "username": "bwhite",
-        "password": "password789",
         "firstName": "Bob",
         "lastName": "White",
         "email": "bwhite@example.com",
@@ -37,7 +34,6 @@
     },
     {
         "username": "cjones",
-        "password": "password321",
         "firstName": "Charlie",
         "lastName": "Jones",
         "email": "cjones@example.com",
@@ -49,7 +45,6 @@
     },
     {
         "username": "dwilliams",
-        "password": "password654",
         "firstName": "David",
         "lastName": "Williams",
         "email": "dwilliams@example.com",
@@ -61,7 +56,6 @@
     },
     {
         "username": "eharris",
-        "password": "password987",
         "firstName": "Emily",
         "lastName": "Harris",
         "email": "eharris@example.com",
@@ -73,7 +67,6 @@
     },
     {
         "username": "fmartin",
-        "password": "password111",
         "firstName": "Frank",
         "lastName": "Martin",
         "email": "fmartin@example.com",
@@ -85,7 +78,6 @@
     },
     {
         "username": "gclark",
-        "password": "password222",
         "firstName": "Grace",
         "lastName": "Clark",
         "email": "gclark@example.com",
@@ -97,7 +89,6 @@
     },
     {
         "username": "hlee",
-        "password": "password333",
         "firstName": "Henry",
         "lastName": "Lee",
         "email": "hlee@example.com",
@@ -109,7 +100,6 @@
     },
     {
         "username": "imiller",
-        "password": "password444",
         "firstName": "Isabella",
         "lastName": "Miller",
         "email": "imiller@example.com",
@@ -121,7 +111,6 @@
     },
     {
         "username": "jwilson",
-        "password": "password555",
         "firstName": "Jack",
         "lastName": "Wilson",
         "email": "jwilson@example.com",
@@ -133,7 +122,6 @@
     },
     {
         "username": "kroberts",
-        "password": "password666",
         "firstName": "Karen",
         "lastName": "Roberts",
         "email": "kroberts@example.com",
@@ -145,7 +133,6 @@
     },
     {
         "username": "lsanchez",
-        "password": "password777",
         "firstName": "Laura",
         "lastName": "Sanchez",
         "email": "lsanchez@example.com",
@@ -157,7 +144,6 @@
     },
     {
         "username": "mthompson",
-        "password": "password888",
         "firstName": "Michael",
         "lastName": "Thompson",
         "email": "mthompson@example.com",
@@ -169,7 +155,6 @@
     },
     {
         "username": "nlopez",
-        "password": "password999",
         "firstName": "Nancy",
         "lastName": "Lopez",
         "email": "nlopez@example.com",
@@ -181,7 +166,6 @@
     },
     {
         "username": "owilson",
-        "password": "password000",
         "firstName": "Oscar",
         "lastName": "Wilson",
         "email": "owilson@example.com",
@@ -193,7 +177,6 @@
     },
     {
         "username": "pking",
-        "password": "password111",
         "firstName": "Paula",
         "lastName": "King",
         "email": "pking@example.com",
@@ -205,7 +188,6 @@
     },
     {
         "username": "rmoore",
-        "password": "password222",
         "firstName": "Richard",
         "lastName": "Moore",
         "email": "rmoore@example.com",
@@ -217,7 +199,6 @@
     },
     {
         "username": "sscott",
-        "password": "password333",
         "firstName": "Sarah",
         "lastName": "Scott",
         "email": "sscott@example.com",
@@ -229,7 +210,6 @@
     },
     {
         "username": "tbrown",
-        "password": "password444",
         "firstName": "Thomas",
         "lastName": "Brown",
         "email": "tbrown@example.com",

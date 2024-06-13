@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
+// Material
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
@@ -12,14 +13,15 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
 import { RippleModule } from 'primeng/ripple';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { StyleClassModule } from 'primeng/styleclass';
-
-// import {SidebarComponent} from '../widget/sidebar/sidebar.component'
-
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
+import { DialogModule } from 'primeng/dialog';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 @NgModule({
   imports: [
-    CommonModule,
     RouterModule,
+    CommonModule,
     ButtonModule,
     InputTextModule,
     TableModule,
@@ -30,9 +32,13 @@ import { StyleClassModule } from 'primeng/styleclass';
     PanelMenuModule,
     StyleClassModule,
     AvatarGroupModule,
-    // SidebarComponent
+    IconFieldModule,
+    InputIconModule,
+    DialogModule,
+    ConfirmDialogModule
   ],
   exports: [
+    CommonModule,
     ButtonModule,
     RouterModule,
     InputTextModule,
@@ -44,7 +50,10 @@ import { StyleClassModule } from 'primeng/styleclass';
     PanelMenuModule,
     StyleClassModule,
     AvatarGroupModule,
-    // SidebarComponent
+    IconFieldModule,
+    InputIconModule,
+    DialogModule,
+    ConfirmDialogModule
   ]
 })
 export class SharedModule { }
