@@ -1,1 +1,94 @@
-<p>add-employee works!</p>
+<p-toast></p-toast>
+<div class="flex align-items-center justify-content-center">
+  <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6 my-5">
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <div class="p-field">
+        <label class="block text-900 font-medium mb-2" for="username">Username:</label>
+        <input class="w-full mb-3" id="username" pInputText formControlName="username" />
+        <div *ngIf="employeeForm.get('username').hasError('required')">
+          Username is required.
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label class="block text-900 font-medium mb-2" for="firstName">First Name:</label>
+        <input class="w-full mb-3" id="firstName" pInputText formControlName="firstName" />
+        <div *ngIf="employeeForm.get('firstName').hasError('required')">
+          First Name is required.
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label class="block text-900 font-medium mb-2" for="lastName">Last Name:</label>
+        <input class="w-full mb-3" id="lastName" pInputText formControlName="lastName" />
+        <div *ngIf="employeeForm.get('lastName').hasError('required')">
+          Last Name is required.
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label class="block text-900 font-medium mb-2" for="email">Email:</label>
+        <input class="w-full mb-3" id="email" pInputText formControlName="email" />
+        <div *ngIf="employeeForm.get('email').hasError('required')">
+          Valid Email is required.
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label class="block text-900 font-medium mb-2" for="birthDate">Birth Date:</label>
+        <p-calendar id="birthDate" formControlName="birthDate"></p-calendar>
+        <div *ngIf="employeeForm.get('birthDate').hasError('required')">
+          Birth Date must be today or earlier.
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label class="block text-900 font-medium mb-2" for="basicSalary">Basic Salary:</label>
+        <p-inputNumber id="basicSalary" formControlName="basicSalary"></p-inputNumber>
+        <div *ngIf="employeeForm.get('basicSalary').hasError('required')">
+          Basic Salary must be a number.
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label class="block text-900 font-medium mb-2" for="status">Status:</label>
+        <input class="w-full mb-3" id="status" pInputText formControlName="status" />
+        <div *ngIf="employeeForm.get('status').hasError('required')">
+          Status is required.
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label class="block text-900 font-medium mb-2" for="grup">Group:</label>
+        <p-dropdown [options]="groups" formControlName="grup" optionLabel="name" [filter]="true"
+          filterBy="name" [showClear]="true" placeholder="Select a group">
+          <ng-template pTemplate="selectedItem" let-selectedOption>
+            <div class="flex align-items-center gap-2">
+              <div>{{ selectedOption.name }}</div>
+            </div>
+          </ng-template>
+        </p-dropdown>
+        <div *ngIf="employeeForm.get('grup').hasError('required')">
+          Group is required.
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label class="block text-900 font-medium mb-2" for="description">Description:</label>
+        <textarea id="description" cols="40" pInputTextarea formControlName="description"></textarea>
+        <div *ngIf="employeeForm.get('description').hasError('required')">
+          Group is required.
+        </div>
+      </div>
+      <div class="grid mt-5">
+        <div class="col-6">
+          <button pButton type="cancel" class="w-full" label="Cancel" [routerLink]="['/employee/list']"
+            severity="secondary"></button>
+        </div>
+        <div class="col-6">
+          <button pButton type="submit" class="w-full" label="Submit" [disabled]="employeeForm.invalid"></button></div>
+
+      </div>
+    </form>
+  </div>
+</div>

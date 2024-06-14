@@ -14,21 +14,36 @@ import { SharedModule } from '../../shared/shared.module';
 export class NavigasiComponent implements OnInit{
 
   items: MegaMenuItem[] | undefined;
+  activePath: string = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
       this.items = [
           {
               label: 'Data Employee',
-              root: true,
-              command: () => this.router.navigate(['/employee/list'])
+              alamat:'/employee/list',
+              command: () => this.navigate('/employee/list')
           },
           {
               label: 'Tambah Data',
-              root: true,
-              command: () => this.router.navigate(['/employee/add'])
+              alamat:'/employee/add',
+              command: () => this.navigate('/employee/add')
           }
       ];
+  }
+
+  navigate(path: string) {
+    this.activePath = path;
+    console.log(this.activePath)
+    this.router.navigate([path]);
+  }
+
+  isActive(index: string): boolean {
+    if(this.activePath===''){
+      this.activePath=this.router.routerState.snapshot.url
+    }
+    return this.activePath === index;
   }
 }

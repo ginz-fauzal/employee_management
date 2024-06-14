@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Material
 import { ButtonModule } from 'primeng/button';
@@ -24,12 +25,16 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { MessagesModule } from 'primeng/messages';
 import { ToastModule } from 'primeng/toast';
 import { FormsModule } from '@angular/forms';
+import { CalendarModule } from 'primeng/calendar';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 
 @NgModule({
   imports: [
     RouterModule,
     CommonModule,
+    ReactiveFormsModule,
     FormsModule,
     ButtonModule,
     InputTextModule,
@@ -51,10 +56,14 @@ import { FormsModule } from '@angular/forms';
     MegaMenuModule,
     AvatarModule,
     MessagesModule,
-    ToastModule
+    ToastModule,
+    CalendarModule,
+    InputNumberModule,
+    InputTextareaModule
   ],
   exports: [
     CommonModule,
+    ReactiveFormsModule,
     ButtonModule,
     FormsModule,
     RouterModule,
@@ -77,7 +86,10 @@ import { FormsModule } from '@angular/forms';
     MegaMenuModule,
     AvatarModule,
     MessagesModule,
-    ToastModule
+    ToastModule,
+    CalendarModule,
+    InputNumberModule,
+    InputTextareaModule
   ]
 })
 export class SharedModule { }

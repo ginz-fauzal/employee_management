@@ -20,7 +20,11 @@ export class LoginService {
   }
 
   isLoggedIn(): boolean {
-    return localStorage.getItem('isLoggedIn') === 'true';
+    if(localStorage.getItem('isLoggedIn')){
+      return localStorage.getItem('isLoggedIn') === 'true'
+    }else{
+      return false
+    }
   }
 
 }

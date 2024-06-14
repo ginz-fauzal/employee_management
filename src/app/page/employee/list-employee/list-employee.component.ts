@@ -4,6 +4,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { Employee } from '../../../models/employee.model';
 import { EmployeeService } from '../service-employee/employee.service';
 import { SharedModule } from '../../../shared/shared.module';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-employee',
@@ -20,7 +21,8 @@ export class ListEmployeeComponent implements OnInit{
   constructor(
     private employeeService: EmployeeService,
     private messageService: MessageService, 
-    private confirmationService: ConfirmationService
+    private confirmationService: ConfirmationService,
+    private router:Router
   ) {
    
   }
@@ -42,7 +44,11 @@ export class ListEmployeeComponent implements OnInit{
     });
   }
 
-  editProduct(){
+  editEmployee(){
     this.messageService.add({ severity: 'warn', summary: 'Successful', detail: 'Product Updated', life: 3000 });
+  }
+
+  detailEmployee(username: string): void {
+    this.router.navigate(['/employee/detail', username]);
   }
 }
