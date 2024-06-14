@@ -3,7 +3,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 
 import { SharedModule } from '../../../shared/shared.module';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-employee',
@@ -18,7 +17,10 @@ export class AddEmployeeComponent {
   employeeForm: any;
   groups: any[] | undefined;
 
-  constructor(private fb: FormBuilder, private messageService: MessageService,private router:Router) {}
+  constructor(
+    private fb: FormBuilder, 
+    private messageService: MessageService
+  ) {}
 
   ngOnInit() {
     this.employeeForm = this.fb.group({

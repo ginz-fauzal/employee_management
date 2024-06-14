@@ -17,7 +17,9 @@ export class DetailEmployeeComponent {
   employee: Employee | undefined;
   employees: Employee[] = [];
 
-  constructor(private employeeService: EmployeeService,private route: ActivatedRoute) { 
+  constructor(
+    private employeeService: EmployeeService,
+    private route: ActivatedRoute) { 
   }
   
 
